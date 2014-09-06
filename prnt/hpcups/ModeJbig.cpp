@@ -36,7 +36,7 @@
 #include "ModeJbig.h"
 #include "hpjbig_wrapper.h"
 #include <dlfcn.h>
-#include "Utils.h"
+#include "HPCupsUtils.h"
 #include "utils.h"
 
 extern "C"

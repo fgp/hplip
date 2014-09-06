@@ -460,7 +460,7 @@ hpcups_SOURCES = prnt/hpcups/HPCupsFilter.cpp prnt/hpcups/HPCupsFilter.h prnt/hp
 	prnt/hpcups/Halftoner.cpp prnt/hpcups/Halftoner.h prnt/hpcups/Scaler.cpp prnt/hpcups/Scaler.h prnt/hpcups/resources.h \
 	prnt/hpcups/dj400ColorMaps.cpp prnt/hpcups/dj600ColorMaps.cpp prnt/hpcups/dj970ColorMaps.cpp prnt/hpcups/dj8xxColorMaps.cpp \
 	prnt/hpcups/dj4100ColorMaps.cpp \
-	prnt/hpcups/BreakTables.cpp prnt/hpcups/PrinterCommands.h prnt/hpcups/Utils.cpp prnt/hpcups/Utils.h \
+	prnt/hpcups/BreakTables.cpp prnt/hpcups/PrinterCommands.h prnt/hpcups/HPCupsUtils.cpp prnt/hpcups/HPCupsUtils.h \
 	prnt/hpcups/SystemServices.cpp prnt/hpcups/SystemServices.h prnt/hpcups/CommonDefinitions.h prnt/hpcups/hpjbig_wrapper.h \
 	prnt/hpcups/apPrintModes.h prnt/hpcups/dj400PrintModes.h prnt/hpcups/dj540PrintModes.h prnt/hpcups/dj600PrintModes.h \
 	prnt/hpcups/dj630PrintModes.h prnt/hpcups/dj690PrintModes.h prnt/hpcups/dj850PrintModes.h prnt/hpcups/dj890PrintModes.h \

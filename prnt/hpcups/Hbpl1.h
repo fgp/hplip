@@ -41,7 +41,7 @@
 #include "resources.h"
 #include "ColorMaps.h"
 #include "PrinterCommands.h"
-#include "Utils.h"
+#include "HPCupsUtils.h"
 #include "Hbpl1_Wrapper.h"
 #define HBPL1_DEFAULT_STRIP_HEIGHT 128
 

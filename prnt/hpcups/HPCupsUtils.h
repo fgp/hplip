@@ -1,5 +1,5 @@
 /*****************************************************************************\
-  Utils.cpp : implementaiton of utility functions
+  HPCupsUtils.cpp : implementaiton of utility functions
 
   Copyright (c) 1996 - 2001, Hewlett-Packard Co.
   All rights reserved.

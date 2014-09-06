@@ -40,7 +40,7 @@
 #include "ColorMaps.h"
 #include "PrinterCommands.h"
 #include "LJZjStream.h"
-#include "Utils.h"
+#include "HPCupsUtils.h"
 #include "hpjbig_wrapper.h"
 #include "utils.h"
 

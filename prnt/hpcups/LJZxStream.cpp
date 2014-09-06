@@ -38,7 +38,7 @@
 #include "ColorMaps.h"
 #include "PrinterCommands.h"
 #include "LJZxStream.h"
-#include "Utils.h"
+#include "HPCupsUtils.h"
 #include "hpjbig_wrapper.h"
 
 LJZxStream::LJZxStream () : Encapsulator ()

@@ -1,0 +1,15 @@
+/.deps/
+/Makefile
+/autom4te.cache/
+/config.log
+/config.status
+/hplip-systray.desktop
+/hplip.conf
+/hplip.desktop
+/hplip.list
+/libtool
+/phloconf.sh
+/prnt/drv/hpcups.drv
+/prnt/drv/hpijs.drv
+/prnt/hpijs/auto-include.h
+/prnt/hpijs/platform.h

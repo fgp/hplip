@@ -468,7 +468,7 @@ am__hpcups_SOURCES_DIST = prnt/hpcups/HPCupsFilter.cpp \
 	prnt/hpcups/dj600ColorMaps.cpp prnt/hpcups/dj970ColorMaps.cpp \
 	prnt/hpcups/dj8xxColorMaps.cpp prnt/hpcups/dj4100ColorMaps.cpp \
 	prnt/hpcups/BreakTables.cpp prnt/hpcups/PrinterCommands.h \
-	prnt/hpcups/Utils.cpp prnt/hpcups/Utils.h \
+	prnt/hpcups/HPCupsUtils.cpp prnt/hpcups/HPCupsUtils.h \
 	prnt/hpcups/SystemServices.cpp prnt/hpcups/SystemServices.h \
 	prnt/hpcups/CommonDefinitions.h prnt/hpcups/hpjbig_wrapper.h \
 	prnt/hpcups/apPrintModes.h prnt/hpcups/dj400PrintModes.h \
@@ -524,7 +524,7 @@ am__hpcups_SOURCES_DIST = prnt/hpcups/HPCupsFilter.cpp \
 @HPCUPS_INSTALL_TRUE@	hpcups-dj8xxColorMaps.$(OBJEXT) \
 @HPCUPS_INSTALL_TRUE@	hpcups-dj4100ColorMaps.$(OBJEXT) \
 @HPCUPS_INSTALL_TRUE@	hpcups-BreakTables.$(OBJEXT) \
-@HPCUPS_INSTALL_TRUE@	hpcups-Utils.$(OBJEXT) \
+@HPCUPS_INSTALL_TRUE@	hpcups-HPCupsUtils.$(OBJEXT) \
 @HPCUPS_INSTALL_TRUE@	hpcups-SystemServices.$(OBJEXT) \
 @HPCUPS_INSTALL_TRUE@	hpcups-QuickConnect.$(OBJEXT) \
 @HPCUPS_INSTALL_TRUE@	hpcups-ModeJpeg.$(OBJEXT) \
@@ -4895,7 +4895,7 @@ libapdk_la_CFLAGS = $(libapdk_la_CXXFLAGS) -Iprnt/hpijs
 @HPCUPS_INSTALL_TRUE@	prnt/hpcups/Halftoner.cpp prnt/hpcups/Halftoner.h prnt/hpcups/Scaler.cpp prnt/hpcups/Scaler.h prnt/hpcups/resources.h \
 @HPCUPS_INSTALL_TRUE@	prnt/hpcups/dj400ColorMaps.cpp prnt/hpcups/dj600ColorMaps.cpp prnt/hpcups/dj970ColorMaps.cpp prnt/hpcups/dj8xxColorMaps.cpp \
 @HPCUPS_INSTALL_TRUE@	prnt/hpcups/dj4100ColorMaps.cpp \
-@HPCUPS_INSTALL_TRUE@	prnt/hpcups/BreakTables.cpp prnt/hpcups/PrinterCommands.h prnt/hpcups/Utils.cpp prnt/hpcups/Utils.h \
+@HPCUPS_INSTALL_TRUE@	prnt/hpcups/BreakTables.cpp prnt/hpcups/PrinterCommands.h prnt/hpcups/HPCupsUtils.cpp prnt/hpcups/HPCupsUtils.h \
 @HPCUPS_INSTALL_TRUE@	prnt/hpcups/SystemServices.cpp prnt/hpcups/SystemServices.h prnt/hpcups/CommonDefinitions.h prnt/hpcups/hpjbig_wrapper.h \
 @HPCUPS_INSTALL_TRUE@	prnt/hpcups/apPrintModes.h prnt/hpcups/dj400PrintModes.h prnt/hpcups/dj540PrintModes.h prnt/hpcups/dj600PrintModes.h \
 @HPCUPS_INSTALL_TRUE@	prnt/hpcups/dj630PrintModes.h prnt/hpcups/dj690PrintModes.h prnt/hpcups/dj850PrintModes.h prnt/hpcups/dj890PrintModes.h \
@@ -5729,6 +5729,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-EncapsulatorFactory.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-ErnieFilter.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-HPCupsFilter.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-HPCupsUtils.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-Halftoner.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-Hbpl1.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-Job.Po@am__quote@
@@ -5756,7 +5757,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-RasterSender.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-Scaler.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-SystemServices.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-Utils.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-dbuscomm.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-dj3320ColorMaps.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hpcups-dj3600ColorMaps.Po@am__quote@
@@ -7508,19 +7508,19 @@ hpcups-BreakTables.obj: prnt/hpcups/BreakTables.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(hpcups_CXXFLAGS) $(CXXFLAGS) -c -o hpcups-BreakTables.obj `if test -f 'prnt/hpcups/BreakTables.cpp'; then $(CYGPATH_W) 'prnt/hpcups/BreakTables.cpp'; else $(CYGPATH_W) '$(srcdir)/prnt/hpcups/BreakTables.cpp'; fi`
 
-hpcups-Utils.o: prnt/hpcups/Utils.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(hpcups_CXXFLAGS) $(CXXFLAGS) -MT hpcups-Utils.o -MD -MP -MF $(DEPDIR)/hpcups-Utils.Tpo -c -o hpcups-Utils.o `test -f 'prnt/hpcups/Utils.cpp' || echo '$(srcdir)/'`prnt/hpcups/Utils.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/hpcups-Utils.Tpo $(DEPDIR)/hpcups-Utils.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='prnt/hpcups/Utils.cpp' object='hpcups-Utils.o' libtool=no @AMDEPBACKSLASH@
+hpcups-HPCupsUtils.o: prnt/hpcups/HPCupsUtils.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(hpcups_CXXFLAGS) $(CXXFLAGS) -MT hpcups-HPCupsUtils.o -MD -MP -MF $(DEPDIR)/hpcups-HPCupsUtils.Tpo -c -o hpcups-HPCupsUtils.o `test -f 'prnt/hpcups/HPCupsUtils.cpp' || echo '$(srcdir)/'`prnt/hpcups/HPCupsUtils.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/hpcups-HPCupsUtils.Tpo $(DEPDIR)/hpcups-HPCupsUtils.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='prnt/hpcups/HPCupsUtils.cpp' object='hpcups-HPCupsUtils.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(hpcups_CXXFLAGS) $(CXXFLAGS) -c -o hpcups-Utils.o `test -f 'prnt/hpcups/Utils.cpp' || echo '$(srcdir)/'`prnt/hpcups/Utils.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(hpcups_CXXFLAGS) $(CXXFLAGS) -c -o hpcups-HPCupsUtils.o `test -f 'prnt/hpcups/HPCupsUtils.cpp' || echo '$(srcdir)/'`prnt/hpcups/HPCupsUtils.cpp
 
-hpcups-Utils.obj: prnt/hpcups/Utils.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(hpcups_CXXFLAGS) $(CXXFLAGS) -MT hpcups-Utils.obj -MD -MP -MF $(DEPDIR)/hpcups-Utils.Tpo -c -o hpcups-Utils.obj `if test -f 'prnt/hpcups/Utils.cpp'; then $(CYGPATH_W) 'prnt/hpcups/Utils.cpp'; else $(CYGPATH_W) '$(srcdir)/prnt/hpcups/Utils.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/hpcups-Utils.Tpo $(DEPDIR)/hpcups-Utils.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='prnt/hpcups/Utils.cpp' object='hpcups-Utils.obj' libtool=no @AMDEPBACKSLASH@
+hpcups-HPCupsUtils.obj: prnt/hpcups/HPCupsUtils.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(hpcups_CXXFLAGS) $(CXXFLAGS) -MT hpcups-HPCupsUtils.obj -MD -MP -MF $(DEPDIR)/hpcups-HPCupsUtils.Tpo -c -o hpcups-HPCupsUtils.obj `if test -f 'prnt/hpcups/HPCupsUtils.cpp'; then $(CYGPATH_W) 'prnt/hpcups/HPCupsUtils.cpp'; else $(CYGPATH_W) '$(srcdir)/prnt/hpcups/HPCupsUtils.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/hpcups-HPCupsUtils.Tpo $(DEPDIR)/hpcups-HPCupsUtils.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='prnt/hpcups/HPCupsUtils.cpp' object='hpcups-HPCupsUtils.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(hpcups_CXXFLAGS) $(CXXFLAGS) -c -o hpcups-Utils.obj `if test -f 'prnt/hpcups/Utils.cpp'; then $(CYGPATH_W) 'prnt/hpcups/Utils.cpp'; else $(CYGPATH_W) '$(srcdir)/prnt/hpcups/Utils.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(hpcups_CXXFLAGS) $(CXXFLAGS) -c -o hpcups-HPCupsUtils.obj `if test -f 'prnt/hpcups/HPCupsUtils.cpp'; then $(CYGPATH_W) 'prnt/hpcups/HPCupsUtils.cpp'; else $(CYGPATH_W) '$(srcdir)/prnt/hpcups/HPCupsUtils.cpp'; fi`
 
 hpcups-SystemServices.o: prnt/hpcups/SystemServices.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(hpcups_CXXFLAGS) $(CXXFLAGS) -MT hpcups-SystemServices.o -MD -MP -MF $(DEPDIR)/hpcups-SystemServices.Tpo -c -o hpcups-SystemServices.o `test -f 'prnt/hpcups/SystemServices.cpp' || echo '$(srcdir)/'`prnt/hpcups/SystemServices.cpp
